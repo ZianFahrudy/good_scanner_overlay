@@ -15,9 +15,8 @@ and the Flutter guide for
 
 QR Scanner overlay with animation to be used with a stack widget.
 
-<!-- # Preview
-![goodsearchappbar](https://github.com/ZianFahrudy/GoodSearchAppBar/assets/45583824/66fa5cc7-a3ba-404c-99b7-391c81575141) -->
-
+# Preview
+![image](https://github.com/ZianFahrudy/good_scanner_overlay/blob/master/assets/Screenshot_20250120-165404.png?raw=true)
 ## Installation
 
 In the `pubspec.yaml` of your flutter project, add the following dependency:
