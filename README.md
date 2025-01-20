@@ -61,7 +61,4 @@ class _MyHomePageState extends State<MyHomePage>
 
 ```
 
-## Issues & Suggestions
-If you encounter any issue you or want to leave a suggestion you can do it by filling an [issue](https://github.com/ZianFahrudy/GoodSearchAppBar/issues).
-
 ### Thank you for the support!
