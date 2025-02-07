@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "good_scanner_overlay",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "good_scanner_overlay (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "good_scanner_overlay (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "examplee",
+            "cwd": "examplee",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "examplee (profile mode)",
+            "cwd": "examplee",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "examplee (release mode)",
+            "cwd": "examplee",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

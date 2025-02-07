@@ -13,7 +13,7 @@ and the Flutter guide for
 
 # Good Scanner Overlay
 
-QR Scanner overlay with animation to be used with a stack widget.
+QR Scanner overlay with animation to be used with a stack widget. The animations inspired by Bank Jago QRIS and BRI QRIS.
 
 # Preview
 ![image](https://github.com/ZianFahrudy/good_scanner_overlay/blob/master/assets/Screenshot_20250120-165404.png?raw=true)
@@ -24,7 +24,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ``` yaml
 dependencies:
   ...
-  good_scanner_overlay: ^0.0.1
+  good_scanner_overlay: ^0.1.0
 ```
 
 ## example
@@ -51,7 +51,13 @@ class _MyHomePageState extends State<MyHomePage>
       body: Stack(
         children: [
           MobileScanner(),
-          GoodScannerOverlay(),
+          GoodScannerOverlay(
+            animationColor: Colors.yellow,
+            borderColor: Colors.blue,
+            goodScannerAnimation: GoodScannerAnimation.center,
+            goodScannerOverlayBackground: GoodScannerOverlayBackground.center,
+            goodScannerBorder: GoodScannerBorder.none,
+          ),
         ],
       ),
     );
