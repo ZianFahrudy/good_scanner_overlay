@@ -13,10 +13,10 @@ and the Flutter guide for
 
 # Good Scanner Overlay
 
-QR Scanner overlay with animation to be used with a stack widget. The animations inspired by Bank Jago QRIS and BRI QRIS.
+QR Scanner overlay with animation to be used with a stack widget. The animations inspired by Bank Jago QRIS and BRI QRIS. But you can combine the atribut 
 
 # Preview
-| Simple | Like BRI QRIS | Like Jago QRIS |
+| Simple | Like Jago QRIS | Like BRI QRIS |
 |-------|-------|-------|
 | ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzVrb2UwYmFoOHY4MmtuN3dmdTg5bW02MGlvYXQ5bWE1bTY0azVwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Xfu6jfJsrG8457NhR8/giphy.gif) | ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGFyODlrZGxpN2tybnlnaTl2N3c3ZWU4NWQ5dzgwankyNXFzNWxmaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ri5NmFinTTcot706lV/giphy.gif) | ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWF6ZmJuYzVhYXZheXFueGpmdXF1czZ5dWdmNThkY3VseWNlbzlwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aQLVHv6shNHSoFJQ0N/giphy.gif) |
 
