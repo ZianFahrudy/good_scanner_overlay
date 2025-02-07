@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:good_scanner_overlay/src/overlay_clipper.dart';
 import 'package:good_scanner_overlay/src/scanner_line_painter.dart';
 
-enum GoodScannerAnimation { center, fullWidth }
+enum GoodScannerAnimation { center, fullWidth, none }
 
 enum GoodScannerOverlayBackground { center, none }
 
@@ -73,14 +73,19 @@ class _GoodScannerOverlayState extends State<GoodScannerOverlay>
           if (widget.goodScannerOverlayBackground ==
               GoodScannerOverlayBackground.center)
             Positioned.fill(
-              child: BackdropFilter(
-                filter: ImageFilter.blur(
-                  sigmaX: 5,
-                  sigmaY: 5,
+              child: ClipPath(
+                clipper: OverlayClipper(
+                  borderRadius: widget.borderRadius,
                 ),
-                child: Container(
-                  color: widget.backgroundBlurColor ??
-                      Colors.black.withValues(alpha: 0.5),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(
+                    sigmaX: 5,
+                    sigmaY: 5,
+                  ),
+                  child: Container(
+                    color: widget.backgroundBlurColor ??
+                        Colors.black.withValues(alpha: 0.5),
+                  ),
                 ),
               ),
             ),
@@ -123,7 +128,7 @@ class _GoodScannerOverlayState extends State<GoodScannerOverlay>
                 );
               },
             )
-          else
+          else if (widget.goodScannerAnimation == GoodScannerAnimation.center)
             Positioned.fill(
               child: AnimatedBuilder(
                 animation: _animation,

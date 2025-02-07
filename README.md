@@ -27,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ``` yaml
 dependencies:
   ...
-  good_scanner_overlay: ^0.1.0
+  good_scanner_overlay: ^0.1.1
 ```
 
 ## example

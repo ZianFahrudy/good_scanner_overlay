@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
             animationColor: Colors.yellow,
             borderColor: Colors.blue,
             goodScannerAnimation: GoodScannerAnimation.fullWidth,
-            goodScannerOverlayBackground: GoodScannerOverlayBackground.none,
+            goodScannerOverlayBackground: GoodScannerOverlayBackground.center,
             goodScannerBorder: GoodScannerBorder.center,
           ),
         ],

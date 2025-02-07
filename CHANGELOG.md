@@ -1,3 +1,7 @@
+## 0.1.1
+
+* add none scanner animation
+
 ## 0.1.0
 
 * add fullwidth animation
