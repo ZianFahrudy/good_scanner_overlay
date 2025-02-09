@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 class ScanningLinePainter extends CustomPainter {
@@ -29,9 +31,9 @@ class ScanningLinePainter extends CustomPainter {
     final linePaint = Paint()
       ..shader = LinearGradient(
         colors: [
-          animationColor!.withValues(alpha: 0),
-          animationColor!.withValues(alpha: 0.5),
-          animationColor!.withValues(alpha: 0),
+          animationColor!.withOpacity(0),
+          animationColor!.withOpacity(0.5),
+          animationColor!.withOpacity(0),
         ],
         // begin: Alignment.centerLeft,
         // end: Alignment.centerRight,

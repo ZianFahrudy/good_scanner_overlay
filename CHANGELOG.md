@@ -1,3 +1,7 @@
+## 0.1.2
+
+* change withValues to withOpacity
+
 ## 0.1.1
 
 * add none scanner animation

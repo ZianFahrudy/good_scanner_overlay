@@ -1,6 +1,6 @@
 name: good_scanner_overlay
 description: "QR Scanner overlay with animation to be used with a stack widget. The animations inspired by Bank Jago QRIS and BRI QRIS"
-version: 0.1.1
+version: 0.1.2
 homepage: "https://github.com/ZianFahrudy/good_scanner_overlay.git"
 
 environment:
