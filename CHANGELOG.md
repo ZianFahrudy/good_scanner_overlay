@@ -1,3 +1,8 @@
+## 0.1.4
+
+* add custom background
+* add custom curve animation
+
 ## 0.1.3
 
 * Update minimum sdk

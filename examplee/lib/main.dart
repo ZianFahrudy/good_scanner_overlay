@@ -47,11 +47,11 @@ class _MyHomePageState extends State<MyHomePage> {
             borderColor: Colors.red,
             // curve: Curves.easeInOut,
             borderRadius: 0,
-            // backgroudWidget: Image.network(
-            //   'https://m.media-amazon.com/images/M/MV5BYjJmMjBkZjMtZThiZS00Nzk3LWJlN2UtYmE5ZjkyNjJiZjgxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
-            //   fit: BoxFit.cover,
-            // ),
-            goodScannerAnimation: GoodScannerAnimation.center,
+            backgroudWidget: Image.network(
+              'https://m.media-amazon.com/images/M/MV5BYjJmMjBkZjMtZThiZS00Nzk3LWJlN2UtYmE5ZjkyNjJiZjgxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+              fit: BoxFit.cover,
+            ),
+            goodScannerAnimation: GoodScannerAnimation.fullWidth,
             goodScannerOverlayBackground: GoodScannerOverlayBackground.center,
             goodScannerBorder: GoodScannerBorder.center,
           ),
