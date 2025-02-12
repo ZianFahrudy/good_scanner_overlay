@@ -44,8 +44,14 @@ class _MyHomePageState extends State<MyHomePage> {
           MobileScanner(),
           GoodScannerOverlay(
             animationColor: Colors.yellow,
-            borderColor: Colors.blue,
-            goodScannerAnimation: GoodScannerAnimation.fullWidth,
+            borderColor: Colors.red,
+            // curve: Curves.easeInOut,
+            borderRadius: 0,
+            // backgroudWidget: Image.network(
+            //   'https://m.media-amazon.com/images/M/MV5BYjJmMjBkZjMtZThiZS00Nzk3LWJlN2UtYmE5ZjkyNjJiZjgxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+            //   fit: BoxFit.cover,
+            // ),
+            goodScannerAnimation: GoodScannerAnimation.center,
             goodScannerOverlayBackground: GoodScannerOverlayBackground.center,
             goodScannerBorder: GoodScannerBorder.center,
           ),

@@ -22,6 +22,8 @@ class GoodScannerOverlay extends StatefulWidget {
     this.goodScannerAnimation = GoodScannerAnimation.center,
     this.goodScannerOverlayBackground = GoodScannerOverlayBackground.center,
     this.goodScannerBorder = GoodScannerBorder.none,
+    this.curve,
+    this.backgroudWidget,
   });
 
   final Color? animationColor;
@@ -31,6 +33,8 @@ class GoodScannerOverlay extends StatefulWidget {
   final GoodScannerAnimation goodScannerAnimation;
   final GoodScannerOverlayBackground goodScannerOverlayBackground;
   final GoodScannerBorder goodScannerBorder;
+  final Cubic? curve;
+  final Widget? backgroudWidget;
 
   @override
   State<GoodScannerOverlay> createState() => _GoodScannerOverlayState();
@@ -68,7 +72,10 @@ class _GoodScannerOverlayState extends State<GoodScannerOverlay>
                 ? 1
                 : screenHeight - 100)
         .animate(
-      CurvedAnimation(parent: _controller, curve: Curves.linear),
+      CurvedAnimation(
+        parent: _controller,
+        curve: widget.curve ?? Curves.linear,
+      ),
     );
     return SafeArea(
       child: Stack(
@@ -85,10 +92,11 @@ class _GoodScannerOverlayState extends State<GoodScannerOverlay>
                     sigmaX: 5,
                     sigmaY: 5,
                   ),
-                  child: Container(
-                    color: widget.backgroundBlurColor ??
-                        Colors.black.withOpacity(0.5),
-                  ),
+                  child: widget.backgroudWidget ??
+                      Container(
+                        color: widget.backgroundBlurColor ??
+                            Colors.black.withOpacity(0.5),
+                      ),
                 ),
               ),
             ),
@@ -121,10 +129,10 @@ class _GoodScannerOverlayState extends State<GoodScannerOverlay>
                         ],
                       ).createShader(bounds);
                     },
-                    blendMode: BlendMode.srcIn,
+                    blendMode: BlendMode.dstIn,
                     child: Container(
                       width: screenWidth,
-                      height: 20,
+                      height: 50,
                       color: widget.animationColor!,
                     ),
                   ),
@@ -139,12 +147,12 @@ class _GoodScannerOverlayState extends State<GoodScannerOverlay>
                   return CustomPaint(
                     painter: ScanningLinePainter(
                       animationValue: _animation.value,
-                      animationColor: widget.animationColor,
+                      // animationColor: widget.animationColor,
                     ),
                   );
                 },
               ),
-            ),
+            )
         ],
       ),
     );

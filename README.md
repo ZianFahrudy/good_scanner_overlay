@@ -16,9 +16,9 @@ and the Flutter guide for
 QR Scanner overlay with animation to be used with a stack widget. The animations inspired by Bank Jago QRIS and BRI QRIS. But you can combine the atribut 
 
 # Preview
-| Simple | Like Jago QRIS | Like BRI QRIS |
-|-------|-------|-------|
-| ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzVrb2UwYmFoOHY4MmtuN3dmdTg5bW02MGlvYXQ5bWE1bTY0azVwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Xfu6jfJsrG8457NhR8/giphy.gif) | ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGFyODlrZGxpN2tybnlnaTl2N3c3ZWU4NWQ5dzgwankyNXFzNWxmaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ri5NmFinTTcot706lV/giphy.gif) | ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWF6ZmJuYzVhYXZheXFueGpmdXF1czZ5dWdmNThkY3VseWNlbzlwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aQLVHv6shNHSoFJQ0N/giphy.gif) |
+| Simple | Like Jago QRIS | Like BRI QRIS | Custom backgroud |
+|-------|-------|-------|-------|
+| ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzVrb2UwYmFoOHY4MmtuN3dmdTg5bW02MGlvYXQ5bWE1bTY0azVwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Xfu6jfJsrG8457NhR8/giphy.gif) | ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGFyODlrZGxpN2tybnlnaTl2N3c3ZWU4NWQ5dzgwankyNXFzNWxmaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ri5NmFinTTcot706lV/giphy.gif) | ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWF6ZmJuYzVhYXZheXFueGpmdXF1czZ5dWdmNThkY3VseWNlbzlwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aQLVHv6shNHSoFJQ0N/giphy.gif) | ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2dudTA5Y3BxbTYxNTkxanJnOGdhMmp2aGhtc2I4ZjE5OXZqMzN4NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/M9aKf9Jw6eSn9uX4LC/giphy.gif) |
 
 ## Installation
 
@@ -27,7 +27,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 ``` yaml
 dependencies:
   ...
-  good_scanner_overlay: ^0.1.3
+  good_scanner_overlay: ^0.1.4
 ```
 
 ## example
@@ -56,10 +56,16 @@ class _MyHomePageState extends State<MyHomePage>
           MobileScanner(),
           GoodScannerOverlay(
             animationColor: Colors.yellow,
-            borderColor: Colors.blue,
+            borderColor: Colors.red,
+            // curve: Curves.easeInOut,
+            borderRadius: 0,
+            backgroudWidget: Image.network(
+              'https://m.media-amazon.com/images/M/MV5BYjJmMjBkZjMtZThiZS00Nzk3LWJlN2UtYmE5ZjkyNjJiZjgxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+              fit: BoxFit.cover,
+            ),
             goodScannerAnimation: GoodScannerAnimation.center,
             goodScannerOverlayBackground: GoodScannerOverlayBackground.center,
-            goodScannerBorder: GoodScannerBorder.none,
+            goodScannerBorder: GoodScannerBorder.center,
           ),
         ],
       ),
