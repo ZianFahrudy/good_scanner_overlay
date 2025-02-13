@@ -19,22 +19,26 @@ class GoodScannerOverlay extends StatefulWidget {
     this.borderColor = Colors.green,
     this.backgroundBlurColor,
     this.borderRadius,
+    this.cornerRadius,
     this.goodScannerAnimation = GoodScannerAnimation.center,
     this.goodScannerOverlayBackground = GoodScannerOverlayBackground.center,
     this.goodScannerBorder = GoodScannerBorder.none,
     this.curve,
     this.backgroudWidget,
+    this.lineThickness,
   });
 
   final Color? animationColor;
   final Color? borderColor;
   final Color? backgroundBlurColor;
   final double? borderRadius;
+  final double? cornerRadius;
   final GoodScannerAnimation goodScannerAnimation;
   final GoodScannerOverlayBackground goodScannerOverlayBackground;
   final GoodScannerBorder goodScannerBorder;
   final Cubic? curve;
   final Widget? backgroudWidget;
+  final double? lineThickness;
 
   @override
   State<GoodScannerOverlay> createState() => _GoodScannerOverlayState();
@@ -104,6 +108,7 @@ class _GoodScannerOverlayState extends State<GoodScannerOverlay>
             Positioned.fill(
               child: CustomPaint(
                 painter: ScannerCornerPainter(
+                  cornerRadius: widget.cornerRadius ?? 0,
                   borderColor: widget.borderColor,
                 ),
               ),
@@ -132,7 +137,7 @@ class _GoodScannerOverlayState extends State<GoodScannerOverlay>
                     blendMode: BlendMode.dstIn,
                     child: Container(
                       width: screenWidth,
-                      height: 50,
+                      height: widget.lineThickness ?? 50,
                       color: widget.animationColor!,
                     ),
                   ),
@@ -147,6 +152,7 @@ class _GoodScannerOverlayState extends State<GoodScannerOverlay>
                   return CustomPaint(
                     painter: ScanningLinePainter(
                       animationValue: _animation.value,
+                      lineThickness: widget.lineThickness ?? 4,
                       // animationColor: widget.animationColor,
                     ),
                   );

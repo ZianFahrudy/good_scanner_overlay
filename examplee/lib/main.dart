@@ -45,13 +45,14 @@ class _MyHomePageState extends State<MyHomePage> {
           GoodScannerOverlay(
             animationColor: Colors.yellow,
             borderColor: Colors.red,
-            // curve: Curves.easeInOut,
             borderRadius: 0,
+            cornerRadius: 20,
             backgroudWidget: Image.network(
               'https://m.media-amazon.com/images/M/MV5BYjJmMjBkZjMtZThiZS00Nzk3LWJlN2UtYmE5ZjkyNjJiZjgxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
               fit: BoxFit.cover,
             ),
             goodScannerAnimation: GoodScannerAnimation.fullWidth,
+            lineThickness: 20,
             goodScannerOverlayBackground: GoodScannerOverlayBackground.center,
             goodScannerBorder: GoodScannerBorder.center,
           ),

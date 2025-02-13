@@ -1,3 +1,8 @@
+## 0.1.5
+
+* add custom corner radius
+* add custom line thickness
+
 ## 0.1.4
 
 * add custom background

@@ -6,9 +6,12 @@ class ScanningLinePainter extends CustomPainter {
   ScanningLinePainter({
     required this.animationValue,
     this.animationColor = Colors.green,
+    this.lineThickness = 4.0, // Custom thickness
   });
+
   final double animationValue;
   final Color? animationColor;
+  final double lineThickness; // Variabel baru untuk ketebalan garis
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -35,14 +38,14 @@ class ScanningLinePainter extends CustomPainter {
           animationColor!.withOpacity(0.5),
           animationColor!.withOpacity(0),
         ],
-        // begin: Alignment.centerLeft,
-        // end: Alignment.centerRight,
       ).createShader(
-        Rect.fromLTWH(roundedRect.left, lineY - 1, roundedRect.width, 2),
+        Rect.fromLTWH(roundedRect.left, lineY - lineThickness / 2,
+            roundedRect.width, lineThickness),
       );
 
     canvas.drawRect(
-      Rect.fromLTWH(roundedRect.left, lineY - 2, roundedRect.width, 4),
+      Rect.fromLTWH(roundedRect.left, lineY - lineThickness / 2,
+          roundedRect.width, lineThickness),
       linePaint,
     );
   }
